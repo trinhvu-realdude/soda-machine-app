@@ -1,0 +1,13 @@
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    overflow: hidden;
+    width: 200px;
+    cursor: pointer;
+}
+
+.card:hover {
+    border-color: green;
+}

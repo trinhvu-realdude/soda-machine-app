@@ -1,0 +1,15 @@
+.body-machine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.money-insert-section,
+.purchase-section {
+    margin-bottom: 20px;
+}
+
+.money-insert-section h2,
+.purchase-section h2 {
+    margin-bottom: 10px;
+}
