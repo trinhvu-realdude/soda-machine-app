@@ -53,6 +53,8 @@ export const Purchase: React.FC<PurchaseProps> = ({
                     }
                     setInsertedMoney((prev) => prev - totalCost);
                     setSelectedProduct(null);
+                } else {
+                    alert(`Error: ${transaction}`);
                 }
             } else {
                 alert("Not enough money inserted.");

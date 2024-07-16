@@ -42,6 +42,8 @@ export const MoneyInsert: React.FC<MoneyInsertProps> = ({
                 alert(
                     `Cancelled request. You received ${transaction.amountPaid} VND.`
                 );
+            } else {
+                alert(`Error: ${transaction}`);
             }
         } else {
             setInsertedMoney(0);

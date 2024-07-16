@@ -28,7 +28,7 @@ export const createTransaction = async (
         });
 
         const transaction = await data.json();
-        return transaction;
+        return transaction.data;
     } catch (error) {
         console.log(error);
     }
@@ -39,22 +39,19 @@ export const cancelTransaction = async (
     username: string
 ) => {
     try {
-        const data = await fetch(
-            `${API_BASE_URL}/cancelTransaction`,
-            {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    transactionId: releasedProduct.transactionId,
-                    username: username,
-                }),
-            }
-        );
+        const data = await fetch(`${API_BASE_URL}/cancelTransaction`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                transactionId: releasedProduct.transactionId,
+                username: username,
+            }),
+        });
 
         const transaction = await data.json();
-        return transaction;
+        return transaction.data;
     } catch (error) {
         console.log(error);
     }
